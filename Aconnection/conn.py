@@ -20,6 +20,7 @@ class Connection:
         collect = self.db[collection]
         result = collect.insert_one(data)
         print(f'Insert Document -> {result.inserted_id}')
+        return result.inserted_id
 
     def insert_many(self, collection, data):
         collect = self.db[collection]
