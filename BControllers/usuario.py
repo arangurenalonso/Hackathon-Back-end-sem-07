@@ -1,6 +1,6 @@
 from AModels.usuario import usuario
 from DHelpers.menu import Menu
-from DHelpers.Validacion import validacion
+from DHelpers.validacion import validacion
 from BControllers.menu_tienda import app
 
 class Usuario_Controllers:

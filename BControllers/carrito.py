@@ -1,6 +1,6 @@
 from AModels.carrito import carrito
 from DHelpers.menu import Menu
-from DHelpers.Validacion import validacion
+from DHelpers.validacion import validacion
 
 class Carrito_Controllers:
     def __init__(self,id_Usuario):

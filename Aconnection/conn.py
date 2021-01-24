@@ -13,7 +13,7 @@ class Connection:
 
     def get_one(self, collection, condition={}, select={}):
         collect = self.db[collection]
-        result = collect.find_one(condition, select)
+        result = collect.find_all(condition, select)
         return result
 
     def insert(self, collection, data):

@@ -1,6 +1,6 @@
 from AModels.Producto import Producto
 from AModels.Categoria import Categoria
-from DHelpers.Validacion import validacion
+from DHelpers.validacion import validacion
 from DHelpers.menu import Menu
 
 
