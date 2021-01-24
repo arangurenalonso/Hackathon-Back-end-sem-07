@@ -50,7 +50,7 @@ class ControllerProducto:
         while True:
             nombre_categoria = self.validar.valiar_ingreso_texto("Ingrese la categoria del producto")
             if self.validar.validar_existencia_campo_valor_categoria('nombres_categoria',nombre_categoria):
-                categ_id=f'''{self.validar.validar_existencia_campo_valor_categoria('nombres_categoria',nombre_categoria)['_id']}'''
+                categ_id=self.validar.validar_existencia_campo_valor_categoria('nombres_categoria',nombre_categoria)['_id']
                 break
             else:
                 print('La categoria ingresada no existe')
@@ -109,7 +109,7 @@ class ControllerProducto:
                     BUSCAR PRODUCTO
                 =====================
                 ''')
-            Nombre_Producto = self.validar.valiar_ingreso_texto("Ingrese el nombre de la categoria a buscar")
+            Nombre_Producto = self.validar.valiar_ingreso_texto("Ingrese el nombre del producto a buscar")
             producto_buscado=self.validar.validar_existencia_campo_valor_producto('nombres_producto',Nombre_Producto)
             if producto_buscado:
                 print('''
@@ -165,7 +165,7 @@ class ControllerProducto:
             while True:
                 nombre_categoria = self.validar.valiar_ingreso_texto("Ingrese la categoria del producto")
                 if self.validar.validar_existencia_campo_valor_categoria('nombres_categoria',nombre_categoria):
-                    cambio['categoria_identificador']=f'''{self.validar.validar_existencia_campo_valor_categoria('nombres_categoria',nombre_categoria)['_id']}'''
+                    cambio['categoria_identificador']=self.validar.validar_existencia_campo_valor_categoria('nombres_categoria',nombre_categoria)['_id']
                     cambio['categoria']=nombre_categoria
                     break
                 else:
@@ -180,8 +180,6 @@ class ControllerProducto:
         condicion = {
         '_id': id_producto
         }
-        print(cambio)
-        print(condicion)
         self.productos.update_producto(condicion,cambio)
         
         print('''

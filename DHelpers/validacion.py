@@ -12,6 +12,8 @@ class validacion:
         self.producto=Producto()
         self.carrito=carrito()
     
+ 
+
     def validar_existencia_campo_valor_producto(self,campo,valor):
         lista_producto=self.producto.get_productos({
                 

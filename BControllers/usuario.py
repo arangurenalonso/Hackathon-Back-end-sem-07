@@ -12,6 +12,8 @@ class Usuario_Controllers:
 
     def menu(self):
         try:
+            
+            
             while True:
                 print('''
                 ==================
@@ -25,12 +27,12 @@ class Usuario_Controllers:
                     print("Bienvenido")
                     register=self.register_usuario()
                     if register:
-                        app(f'{register}').menu()
+                        app(register).menu()
                     
                 elif respuesta == 2:
                     login=self.Login_usuario()
                     if login:
-                        app(f'{login}').menu()
+                        app(login).menu()
                 elif respuesta == 3:
                     self.forgot_password()
                 else:
