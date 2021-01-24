@@ -49,7 +49,7 @@ class ControllerProducto:
                     break
                 
             stock = self.validar.valiar_ingreso_integer("Ingrese el stock del producto")
-            precio = self.validar.valiar_ingreso_integer("Ingrese el precio del producto")  
+            precio = self.validar.valiar_ingreso_decimal("Ingrese el precio del producto")  
             
             data = {
                 'nombres_producto': Nombre_producto,
